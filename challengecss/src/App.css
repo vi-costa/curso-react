@@ -36,6 +36,11 @@
     transform: rotate(360deg);
   }
 }
-p { 
-  background-color: whitesmoke;
+
+h1 {
+  background-color: green;
+  color: white;
+
+  margin: auto;
+  padding: 20px;
 }
