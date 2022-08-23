@@ -36,11 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-h1 {
-  background-color: green;
-  color: white;
-
-  margin: auto;
-  padding: 20px;
-}
