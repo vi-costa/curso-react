@@ -14,7 +14,7 @@ ul {
   margin-bottom: 10px;
 }
 li{
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 
@@ -44,7 +44,6 @@ form input {
 form button {
   padding: 10px;
   border-radius: 10px;
-  margin-top: -10px;
   border: white 2px solid;
 }
 
@@ -52,3 +51,30 @@ form button:hover {
   background-color: #047070;
   border: rgb(158, 156, 156) 2px solid;
 }
+
+.loader {
+  margin-bottom: 10px;
+}
+
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
+
+.delete-icon{
+  background-color: #045d5d;
+  border: 2px white solid;
+  padding: 6px;
+  font-size: 14px;
+  margin-left: 10px;
+}
+.delete-icon:hover{
+  background-color: #035353;
+  border: 2px rgb(160, 158, 158) solid;
+}
+
+.item { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
