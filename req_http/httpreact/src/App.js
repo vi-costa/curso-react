@@ -21,21 +21,18 @@ function App() {
       name,
       price,
     };
-    //   const res = await fetch(url, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(product),
-    //   });
-
-    //   //3 - carregamento dinâmico
-    //   const addedProduct = await res.json();
-    //   setProducts((prevProducts) => [...prevProducts, addedProduct]);
 
     //5 - refatorando post
     httpConfig(product, "POST");
     setName("");
     setPrice("");
   };
+
+  // 8 - desafio 6
+  const handleRemove = (id) => {
+    httpConfig(id, "DELETE");
+  };
+  
   return (
     <div className="App">
       <h1>Lista de produtos</h1>
@@ -52,9 +49,12 @@ function App() {
             items.map((product) => (
               <li key={product.id} className="item">
                 {product.name} - R$ {product.price}
-                <div className="delete-icon">
+                <button
+                  className="delete-button"
+                  onClick={() => handleRemove(product.id)}
+                >
                   <FaTrashAlt />
-                </div>
+                </button>
               </li>
             ))}
         </ul>
