@@ -22,3 +22,15 @@ nav li {
 nav li :hover {
   color: rgb(224, 220, 220);
 }
+
+.active { 
+  background-color: white;
+  color: steelblue;
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.active:hover{
+  color: rgb(44, 103, 151);
+  background-color: lightgray;
+}

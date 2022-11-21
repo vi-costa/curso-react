@@ -1,0 +1,19 @@
+.product a {
+    color: steelblue;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 7px;
+    margin-top: 20px;
+    display: block;
+    width: 10%;
+    margin: auto;
+  }
+  
+  .product a:hover {
+    text-decoration: underline;
+    color: rgb(53, 105, 148);
+    background-color: rgb(231, 229, 229);
+  }
+  
+  

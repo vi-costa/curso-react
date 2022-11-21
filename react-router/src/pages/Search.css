@@ -1,0 +1,40 @@
+
+.results {
+    display: flex;
+    justify-content: center;
+  }
+  
+  h1 {
+    color: steelblue;
+  }
+  
+  .results ul {
+    color: white;
+    list-style: none;
+    margin-top: 10px;
+    width: 25%;
+  }
+
+  .results  li{
+    background-color: steelblue;
+    padding: 20px;
+    margin:  0 2.4em 2em 0;
+ 
+    border-radius: 6px;
+  }
+
+.results a {
+    color: steelblue;
+    background-color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 7px;
+  }
+  
+  .results a:hover {
+    text-decoration: underline;
+    color: rgb(53, 105, 148);
+    background-color: rgb(231, 229, 229);
+  }
+  
+  

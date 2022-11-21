@@ -1,0 +1,38 @@
+form {
+  padding: 20px 0px 0px;
+}
+form input {
+  background-color: steelblue;
+  color: white;
+  border: none;
+  padding: 5px;
+}
+::placeholder {
+  color: white;
+  opacity: 0.75;
+}
+
+form input:active {
+  border: none;
+}
+
+form input:focus {
+  outline: none;
+}
+
+form button:focus {
+  outline: none;
+}
+
+form button {
+  color: white;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  padding: 6px;
+  background-color: steelblue;
+}
+form button:hover {
+  background-color: rgb(61, 123, 173);
+  color: rgb(231, 229, 229);
+}
