@@ -33,7 +33,7 @@ function App() {
     httpConfig(id, "DELETE");
   };
   
-  return (
+  return ( 
     <div className="App">
       <h1>Lista de produtos</h1>
       {/* 6 - loading */}

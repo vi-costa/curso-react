@@ -1,0 +1,25 @@
+button { 
+    background-color: steelblue;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 16px;
+ 
+    margin: 5px;
+}
+
+.sum { 
+    padding: 5px;
+    padding-right: 9px;
+    padding-left: 9px;
+}
+
+.sub { 
+    padding: 5px;
+    padding-right: 11px;
+    padding-left:11px;
+}
+button:hover{
+    background-color: rgb(61, 119, 167);
+    color: rgb(226, 220, 220);
+}
