@@ -6,34 +6,30 @@
   border-bottom: 2px solid #f5bb0d;
 }
 
-#navbr h2 a {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 #navbar form {
   display: flex;
   gap: 0.5rem;
 }
 
 #navbar input {
-  padding: 0.2rem 0.8rem;
-  border-radius: 4px;
+  padding-left: 0.5rem;
+  border-radius: 3px;
   color: black;
   background-color: #f5bb0d;
-  border: none;
+  border: 1px rgb(0, 0, 0) solid;
+  border-bottom: 3px rgb(216, 142, 5) solid;
   transition: 0.6s;
 }
 
-
-
-#navbar input:focus {
+#navbar input:focus,
+#navbar input:hover {
   outline: 2px orange solid;
   background-color: transparent;
   color: #f5bb0d;
+  border-bottom: 3px black solid;
 }
-#navbar input:focus::placeholder {
+#navbar input:focus::placeholder,
+#navbar input:hover::placeholder {
   color: #f5bb0d;
   opacity: 75%;
 }
@@ -44,7 +40,6 @@
 
 #navbar a {
   color: #f5bb0d;
-
   transition: 0.6s;
 }
 #navbar icon {
