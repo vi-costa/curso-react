@@ -21,7 +21,7 @@
 .movies-container div {
   width: 30%;
   color: #fff;
-  margin: 1rem;;
+  margin: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

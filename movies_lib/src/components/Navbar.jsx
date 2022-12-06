@@ -17,9 +17,9 @@ const Navbar = () => {
     <nav id="navbar">
       <h2>
         <Link to="/">
-          <icon>
+          <i>
             <BiCameraMovie />
-          </icon>
+          </i>
           MoviesLib
         </Link>
       </h2>

@@ -7,7 +7,6 @@
 }
 
 .movie-page svg {
-  font-size: 1.5rem;
   color: #f5bb0d;
 }
 
@@ -19,19 +18,31 @@
   width: 300px;
 }
 .movie-page .movie-card img,
-.movie-page .movie-card h2,
-.movie-page .movie-card p {
+.movie-page .movie-card h2 {
   margin-bottom: 1rem;
 }
 
+.average {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+}
+
+.movie-page .movie-card p {
+  vertical-align: middle;
+  padding-left: 5px;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
 .movie-card p {
-    align-items: center;
+  vertical-align: top;
+  display: inline;
+  padding-left: 0.3rem;
 }
 
 .movie-page .movie-card h2 {
   font-size: 2rem;
 }
-
 
 .tagline {
   text-align: center;

@@ -50,8 +50,7 @@ const Movie = () => {
           </div>
           <div className="info">
             <h3>
-              <MdMovie />
-              Gênero:
+              <MdMovie /> Gênero:
             </h3>
             <p>
               {movie.genres[0].name}, {movie.genres[1].name}
