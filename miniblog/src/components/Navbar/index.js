@@ -5,8 +5,8 @@ import { useAuthentication } from "../../hooks/useAuthentication";
 import { useAuthValue } from "../../context/AuthContext";
 
 const Navbar = () => {
-  const user = useAuthValue();
-  const {logout} = useAuthentication();
+  const {user} = useAuthValue();
+  const {logout}= useAuthentication();
 
   return (
     <nav className={styles.navbar}>

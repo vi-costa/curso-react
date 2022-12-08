@@ -11,7 +11,7 @@ import {
 import { useState, useEffect } from "react";
 export const useAuthentication = () => {
   const [error, setError] = useState(null);
-  const [success,setSuccess] = useState(null)
+  const [success, setSuccess] = useState(null);
   const [loading, setLoading] = useState(null);
 
   //cleanup
@@ -39,7 +39,7 @@ export const useAuthentication = () => {
         displayName: data.displayName,
       });
       setLoading(false);
-      setSuccess('Usuário cadastrado com sucesso!')
+      setSuccess("Usuário cadastrado com sucesso!");
       return user;
     } catch (error) {
       console.log(error.message);
@@ -57,6 +57,32 @@ export const useAuthentication = () => {
     }
   };
 
+  const logout = () => {
+    checkIfIsCancelled();
+    signOut(auth);
+  };
+
+  const login = async (data) => {
+    checkIfIsCancelled();
+    setLoading(true);
+    setError(false);
+    try {
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      setLoading(false);
+    } catch (error) {
+      let systemErrorMessage;
+      if (error.message.includes("user-not-found")) {
+        systemErrorMessage = "Usuário não encontrado.";
+      } else if (error.message.includes("wrong-password")) {
+        systemErrorMessage = "Senha incorreta.";
+      } else {
+        systemErrorMessage = "Ocorreu um erro, por favor tente mais tarde.";
+      }
+      setError(systemErrorMessage);
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     return () => setCancelled(true);
   }, []);
@@ -67,5 +93,7 @@ export const useAuthentication = () => {
     error,
     success,
     loading,
+    logout,
+    login
   };
 };
