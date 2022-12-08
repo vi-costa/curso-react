@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { useAuthentication } from "../../hooks/useAuthentication";
 import styles from "./Register.module.css";
+import Loading from "../../components/Loading"
 
 const Register = () => {
   const [displayName, setDisplayName] = useState("");
@@ -8,7 +10,9 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
 
-  const handleSubmit = (e) => {
+  const { createUser, success, error: authError, loading } = useAuthentication();
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     const user = {
@@ -20,7 +24,15 @@ const Register = () => {
       setError("As senhas precisam ser iguais!");
       return;
     }
+    const res = await createUser(user);
   };
+
+  useEffect(() => {
+    if (authError) {
+      setError(authError);
+    }
+  }, [authError]);
+
   return (
     <div className={styles.register}>
       <h1>Cadastre-se para postar</h1>
@@ -71,8 +83,11 @@ const Register = () => {
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
         </label>
-        <button className={`${styles.btn} btn`}>Cadastrar</button>
-        {error && <p className="error">{error}</p>}
+
+        {!loading && <button className={`${styles.btn} btn`}>Cadastrar</button>}
+        {loading && <Loading/>}
+        {error && <p className={`${styles.error} error`}>{error}</p>}
+        {success && <p className={"success"}>{success}</p>}
       </form>
     </div>
   );

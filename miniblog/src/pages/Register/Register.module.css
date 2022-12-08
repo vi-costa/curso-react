@@ -10,5 +10,9 @@
 }
 
  .btn { 
-   margin-top: 1.5em;
+   margin-top: 0.5em;
+}
+
+.error { 
+    margin:1.7em;
 }
