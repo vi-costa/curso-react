@@ -19,6 +19,7 @@ import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 //context
 import { AuthProvider } from "./context/AuthContext";
+import EditPost from "./pages/EditPost";
 
 function App() {
   const [user, setUser] = useState(undefined);
@@ -58,6 +59,10 @@ function App() {
               <Route
                 path="/register"
                 element={!user ? <Register /> : <Navigate to="/" />}
+              />
+                  <Route
+                path="/posts/edit/:id"
+                element={user ? <EditPost /> : <Navigate to="/login" />}
               />
               <Route
                 path="/posts/create"
