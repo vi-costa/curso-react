@@ -16,3 +16,5 @@ const authGuard = async (req, res, next) => {
     res.status(401).json({ errors: ["Token inválido."] });
   }
 };
+
+module.exports = authGuard
