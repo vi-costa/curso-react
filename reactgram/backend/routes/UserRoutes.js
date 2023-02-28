@@ -9,8 +9,9 @@ const {
   update,
   getUserById
 } = require("../controllers/UserController");
-const authGuard = require("../middlewares/authGuard");
+
 // Middlewares
+const authGuard = require("../middlewares/authGuard");
 const validate = require("../middlewares/handleValidation");
 const { imageUpload } = require("../middlewares/imageUpload");
 const {
