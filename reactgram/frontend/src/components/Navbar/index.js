@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import "./Navbar.css";
+import "./styles.css";
 import {
   BsSearch,
   BsHouseDoorFill,
@@ -23,7 +23,6 @@ const Navbar = () => {
   const handleLogout = () => {
     dispatch(logout());
     dispatch(reset());
-
     navigate("/login");
   };
 
