@@ -83,7 +83,7 @@ const EditProfile = () => {
                 : `${uploads}/users/${user.profileImage}`
             }
             alt={user.name}
-          ></img>
+          />
         )}
         <form onSubmit={handleSubmit}>
           <input

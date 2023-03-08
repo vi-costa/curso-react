@@ -156,7 +156,7 @@ const commentPhoto = async (req, res) => {
     res.status(404).json({ errors: ["Foto não encontrada"] });
     return;
   }
-  // Put coment in the arra of comments
+  // Put coment in the array of comments
   const userComment = {
     comment,
     userName: user.name,
