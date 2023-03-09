@@ -1,2 +1,2 @@
 # curso-react
-Curso React 
+Curso de React 
