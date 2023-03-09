@@ -99,12 +99,12 @@ const Profile = () => {
     if (editPhotoForm.current.classList.contains("hide")) {
       hideOrShowForms();
     }
-    setEditTitle(photo._id);
+    setEditId(photo._id);
     setEditTitle(photo.title);
     setEditImage(photo.image);
   };
 
-  const handleCancelEdit = (e) => {
+  const handleCancelEdit = () => {
     hideOrShowForms();
   };
 
